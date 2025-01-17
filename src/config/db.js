@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 const redis = require('redis');
 const config = require('./env');
 
-let mongoClient, redisClient, db;
+ let mongoClient, redisClient, db;
 
 async function connectMongo() {
   try {
@@ -81,3 +81,7 @@ module.exports = {
   getDb,
   getRedis
 };
+
+connectMongo();
+connectRedis();
+console.log(process.env.MONGODB_URI);

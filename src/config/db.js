@@ -84,4 +84,5 @@ module.exports = {
 
 connectMongo();
 connectRedis();
+
 console.log(process.env.MONGODB_URI);
